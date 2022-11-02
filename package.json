@@ -1,0 +1,40 @@
+{
+  "name": "@koralabs/protected-words",
+  "version": "0.1.0",
+  "description": "Library for checking protected words",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "homepage": "https://github.com/koralabs/protected-words",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koralabs/protected-words.git"
+  },
+  "keywords": [
+    "bad words"
+  ],
+  "contributors": [
+    {
+      "name": "BigIrishLion"
+    }
+  ],
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^28.1.1",
+    "@types/pluralize": "^0.0.29",
+    "jest": "^28.1.1",
+    "ts-jest": "^28.0.4",
+    "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "pluralize": "^8.0.0"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ]
+}
