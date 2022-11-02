@@ -1,4 +1,4 @@
-# Cardano Wallets
+# Protected Words
 
 Library for protected words
 
