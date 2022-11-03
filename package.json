@@ -1,6 +1,6 @@
 {
   "name": "@koralabs/protected-words",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Library for checking protected words",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
