@@ -46,7 +46,8 @@ describe('ProtectedWords tests', () => {
         'peanutbutter',
         'childhood',
         'deathstranding',
-        'japan'
+        'japan',
+        'fuckyounigger'
     ];
 
     describe('checkAvailability tests', () => {
@@ -55,291 +56,247 @@ describe('ProtectedWords tests', () => {
             expect(JSON.stringify(results)).toEqual([
                 {
                     available: true,
-                    handle: 'shittum',
-                    duration: 212
+                    handle: 'shittum'
                 },
                 {
                     available: false,
                     handle: 'ea.tmy5_hit',
                     type: 'notallowed',
-                    reason: "In string match found for 'shit'",
-                    duration: 328
+                    reason: "In string match found for 'shit'"
                 },
                 {
                     available: false,
                     handle: 's.h.i.t',
                     type: 'notallowed',
-                    reason: "Protected word match (with stripped characters) on 'shit'",
-                    duration: 220
+                    reason: "Protected word match (with stripped characters) on 'shit'"
                 },
                 {
                     available: false,
                     handle: 'punchbabies',
                     type: 'notallowed',
-                    reason: 'Hatespeech match found for baby,punch',
-                    duration: 118
+                    reason: 'Hatespeech match found for baby,punch'
                 },
                 {
                     available: true,
-                    handle: 'i.love.life',
-                    duration: 232
+                    handle: 'i.love.life'
                 },
                 {
                     available: true,
-                    handle: 'adastaker',
-                    duration: 135
+                    handle: 'adastaker'
                 },
                 {
                     available: true,
-                    handle: 'xar',
-                    duration: 128
+                    handle: 'xar'
                 },
                 {
                     available: true,
-                    handle: 'blade',
-                    duration: 146
+                    handle: 'blade'
                 },
                 {
                     available: true,
-                    handle: 'adahq',
-                    duration: 160
+                    handle: 'adahq'
                 },
                 {
                     available: false,
                     handle: 'lickmycooch',
                     type: 'notallowed',
-                    reason: 'Suggestive language match found for cooch,lick',
-                    duration: 165
+                    reason: 'Suggestive language match found for cooch,lick'
                 },
                 {
                     available: false,
                     handle: 'peckerhead',
                     type: 'notallowed',
-                    reason: "In string match found for 'pecker'",
-                    duration: 127
+                    reason: "In string match found for 'pecker'"
                 },
                 {
                     available: false,
                     handle: 'myahole',
                     type: 'notallowed',
-                    reason: "Protected word match on 'ahole,my'",
-                    duration: 11
+                    reason: "Protected word match on 'ahole,my'"
                 },
                 {
                     available: false,
                     handle: 'ipedophile',
                     type: 'notallowed',
-                    reason: "In string match found for 'pedophil'",
-                    duration: 130
+                    reason: "In string match found for 'pedophil'"
                 },
                 {
                     available: false,
                     handle: 'love2lickbabies',
                     type: 'notallowed',
-                    reason: 'Suggestive language match found for baby,lick',
-                    duration: 184
+                    reason: 'Suggestive language match found for baby,lick'
                 },
                 {
                     available: true,
-                    handle: 'ilovebabies',
-                    duration: 166
+                    handle: 'ilovebabies'
                 },
                 {
                     available: true,
-                    handle: 'power2africa',
-                    duration: 184
+                    handle: 'power2africa'
                 },
                 {
                     available: false,
                     handle: 'pussy1',
                     type: 'notallowed',
-                    reason: "Number trim match on 'pussy'",
-                    duration: 90
+                    reason: "Number trim match on 'pussy'"
                 },
                 {
                     available: false,
                     handle: '1pussy',
                     type: 'notallowed',
-                    reason: "Number trim match on 'pussy'",
-                    duration: 80
+                    reason: "Number trim match on 'pussy'"
                 },
                 {
                     available: false,
                     handle: 'pussyx',
                     type: 'notallowed',
-                    reason: "Number and 'x' trim match on 'pussy'",
-                    duration: 44
+                    reason: "Number and 'x' trim match on 'pussy'"
                 },
                 {
                     available: false,
                     handle: 'xpussy',
                     type: 'notallowed',
-                    reason: "Number and 'x' trim match on 'pussy'",
-                    duration: 40
+                    reason: "Number and 'x' trim match on 'pussy'"
                 },
                 {
                     available: false,
                     handle: 'n1gg3r',
                     type: 'notallowed',
-                    reason: "Number replacement match on 'nigger'",
-                    duration: 12
+                    reason: "Number replacement match on 'nigger'"
                 },
                 {
                     available: false,
                     handle: 'pu55y',
                     type: 'notallowed',
-                    reason: "Number replacement match on 'pussy'",
-                    duration: 13
+                    reason: "Number replacement match on 'pussy'"
                 },
                 {
                     available: false,
                     handle: 'tinypreteenpp',
                     type: 'notallowed',
-                    reason: 'Suggestive language match found for preteen,tiny,pp',
-                    duration: 129
+                    reason: 'Suggestive language match found for preteen,tiny,pp'
                 },
                 {
                     available: true,
-                    handle: 'tinypreteen',
-                    duration: 160
+                    handle: 'tinypreteen'
                 },
                 {
                     available: true,
-                    handle: 'goodtoeat',
-                    duration: 184
+                    handle: 'goodtoeat'
                 },
                 {
                     available: false,
                     handle: 'organigram',
                     type: 'notallowed',
-                    reason: 'Suggestive language match found for organ,ram',
-                    duration: 195
+                    reason: 'Suggestive language match found for organ,ram'
                 },
                 {
                     available: false,
                     handle: 'hail.hitler',
                     type: 'notallowed',
-                    reason: "Protected word match on 'hitler'",
-                    duration: 77
+                    reason: "Protected word match on 'hitler'"
                 },
                 {
                     available: false,
                     handle: 'heil-hitler',
                     type: 'notallowed',
-                    reason: "Protected word match on 'hitler'",
-                    duration: 75
+                    reason: "Protected word match on 'hitler'"
                 },
                 {
                     available: false,
                     handle: 'he1lh1tler',
                     type: 'notallowed',
-                    reason: "Number replacement match on 'heilhitler'",
-                    duration: 21
+                    reason: "Number replacement match on 'heilhitler'"
                 },
                 {
                     available: false,
                     handle: 'heil0hitler',
                     type: 'notallowed',
-                    reason: "Split on numbers match for 'hitler'",
-                    duration: 109
+                    reason: "Split on numbers match for 'hitler'"
                 },
                 {
                     available: false,
                     handle: 'kuklux-klan',
                     type: 'notallowed',
-                    reason: "Protected word match on 'klan'",
-                    duration: 57
+                    reason: "Protected word match on 'klan'"
                 },
                 {
                     available: false,
                     handle: 'ku-kluxklan',
                     type: 'notallowed',
-                    reason: "Protected word match on 'kluxklan'",
-                    duration: 53
+                    reason: "Protected word match on 'kluxklan'"
                 },
                 {
                     available: false,
                     handle: 'jewnazi',
                     type: 'notallowed',
-                    reason: 'Hatespeech match found for jew,nazi',
-                    duration: 139
+                    reason: 'Hatespeech match found for jew,nazi'
                 },
                 {
                     available: false,
                     handle: 'heilnazi',
                     type: 'notallowed',
-                    reason: 'Hatespeech match found for nazi,heil',
-                    duration: 155
+                    reason: 'Hatespeech match found for nazi,heil'
                 },
                 {
                     available: false,
                     handle: 'heilnazihitler',
                     type: 'notallowed',
-                    reason: 'Hatespeech match found for hitler,heil',
-                    duration: 149
+                    reason: 'Hatespeech match found for hitler,heil'
                 },
                 {
                     available: false,
                     handle: 'compassionate',
                     type: 'notallowed',
-                    reason: 'Suggestive language match found for ass,ate',
-                    duration: 158
+                    reason: 'Suggestive language match found for ass,ate'
                 },
                 {
                     available: false,
                     handle: 'rambutan',
                     type: 'notallowed',
-                    reason: 'Suggestive language match found for but,ram',
-                    duration: 199
+                    reason: 'Suggestive language match found for but,ram'
                 },
                 {
                     available: false,
                     handle: 'passionate',
                     type: 'notallowed',
-                    reason: 'Suggestive language match found for ass,ate',
-                    duration: 143
+                    reason: 'Suggestive language match found for ass,ate'
                 },
                 {
                     available: false,
                     handle: 'associate',
                     type: 'notallowed',
-                    reason: 'Suggestive language match found for ass,ate',
-                    duration: 116
+                    reason: 'Suggestive language match found for ass,ate'
                 },
                 {
                     available: false,
                     handle: 'teentitans',
                     type: 'notallowed',
-                    reason: 'Suggestive language match found for teen,tit',
-                    duration: 124
+                    reason: 'Suggestive language match found for teen,tit'
                 },
                 {
                     available: false,
                     handle: 'peanutbutter',
                     type: 'notallowed',
-                    reason: 'Suggestive language match found for but,nut',
-                    duration: 129
+                    reason: 'Suggestive language match found for but,nut'
                 },
                 {
                     available: false,
                     handle: 'childhood',
                     type: 'notallowed',
-                    reason: 'Suggestive language match found for child,hood',
-                    duration: 147
+                    reason: 'Suggestive language match found for child,hood'
                 },
                 {
                     available: false,
                     handle: 'deathstranding',
                     type: 'notallowed',
-                    reason: 'Hatespeech match found for trans,death',
-                    duration: 108
+                    reason: 'Hatespeech match found for trans,death'
                 },
                 {
                     available: false,
                     handle: 'japan',
                     type: 'notallowed',
-                    reason: "Protected word match on 'jap,an'",
-                    duration: 1
+                    reason: "Protected word match on 'jap,an'"
                 }
             ]);
         });

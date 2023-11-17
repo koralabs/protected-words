@@ -3,9 +3,8 @@ import { words } from './protectedWords';
 import { delay } from '../utils';
 import { AvailabilityResponse, AvailabilityResponseCode, Options } from '../interfaces';
 
-const RESPONSE_INVALID_HANDLE_FORMAT =
-    'Invalid handle. Only a-z, 0-9, dash (-), underscore (_), and period (.) are allowed.';
-const RESPONSE_BETA_PHASE_UNAVAILABLE = 'Legendary handles are not available yet.';
+const RESPONSE_INVALID_HANDLE_FORMAT = 'Invalid handle. Only a-z, 0-9, dash (-), underscore (_), and period (.) are allowed.';
+const RESPONSE_BETA_PHASE_UNAVAILABLE = 'Legendary handles are not available to mint.';
 const REGEX_SPLIT_ON_CHARS = /([0-9a-z]+)[.\-_]*/g;
 const REGEX_SPLIT_ON_NUMS = /([a-z]+)[0-9]*/g;
 const ALLOWED_CHAR = new RegExp(/^[a-zA-Z0-9\-_.]{1,15}$/);
